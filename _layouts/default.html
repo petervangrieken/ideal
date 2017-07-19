@@ -31,6 +31,9 @@
         <h2>Eerstvolgende bijeenkomst</h2>
 
         <div>
+			{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
+
+			{% if blogDate >= currentDate %}
 
             <h3>
                 {{ post.title }}
@@ -48,6 +51,8 @@
             </p>
 
             <span>{{ post.date | date: "%e %b" }}</span>
+
+            {% endif %}
 
         </div>
 
@@ -70,7 +75,7 @@
         <ol>
 
 
-        {% for post in site.posts reversed %}
+        {% for post in site.posts %}
 
  			{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
