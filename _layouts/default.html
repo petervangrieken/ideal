@@ -22,7 +22,42 @@
 
 <main id="main" role="main"> 
   
-{{ content }}
+  {% for post in site.posts %}
+
+        <section class="meetup first-up">
+            <h2>Volgende bijeenkomst</h2>
+
+            <div>
+
+                <h3>
+                    Accessible Summer in Rotterdam 🍹
+                </h3>
+
+                <dl>
+                    <dd>Wanneer</dd>
+                    <dt>{{ page.date | date: "%e %B %y" }}</dt>
+                    <dd>Waar</dd>
+                    <dt>UNITiD, Schiedamsedijk 40a, Rotterdam</dt>
+                </dl>
+
+                <p>
+                	{{ post.excerpt }}
+                </p>
+
+                <span>{{ page.date | date: "%b %y" }}</span>
+
+            </div>
+
+
+            <button>Meld je aan</button>
+
+            <a href="https://www.meetup.com/Inclusive-Design-Accessibility/events/239750521/">Meer informatie</a>
+
+        </section>
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
 
 </main>
 </body>
