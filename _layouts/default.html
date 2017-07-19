@@ -24,16 +24,19 @@
 
 {% capture today %}{{'now' | date: '%s' }}{% endcapture %}
 
-{% for post in site.posts %}
-	{% if post.volgende %}
+
+{% for post in site.posts reversed %}
+
+	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
+
+	{% if blogDate >= currentDate %}
+
 
     <section class="meetup first-up">
         <h2>Eerstvolgende bijeenkomst</h2>
 
         <div>
-			{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
-			{% if blogDate >= currentDate %}
 
             <h3>
                 {{ post.title }}
@@ -52,7 +55,6 @@
 
             <span>{{ post.date | date: "%e %b" }}</span>
 
-            {% endif %}
 
         </div>
 
@@ -63,7 +65,9 @@
 
     </section>
 
+    	{% break %}
     {% endif %}
+
 
 {% endfor %}
 
