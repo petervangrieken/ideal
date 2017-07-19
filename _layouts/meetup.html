@@ -22,9 +22,31 @@
 
 <main id="main" role="main"> 
 
-<p class="meta">{{ page.date | date_to_string }}</p>
+        <section class="meetup">
+            <h2>Vorige bijeenkomst</h2>
 
-{{ content }}
+            <div>
+
+                <h3>
+                    {{page.title}}
+                </h3>
+
+                <h4>Presentaties</h4>
+
+
+				{{ content }}
+
+
+                <span>{{ page.date | date: "%b %y" }}</span>
+
+            </div>
+
+            <a href="https://www.meetup.com/Inclusive-Design-Accessibility/events/239750369/">Bekijk deze bijeenkomst op Meetup.com</a>
+
+
+        </section>
+
+
 
 </main>
 </body>
