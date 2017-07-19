@@ -22,42 +22,38 @@
 
 <main id="main" role="main"> 
   
-  {% for post in site.posts %}
+{% for post in site.posts %}
+    <section class="meetup first-up">
+        <h2>Volgende bijeenkomst</h2>
 
-        <section class="meetup first-up">
-            <h2>Volgende bijeenkomst</h2>
+        <div>
 
-            <div>
+            <h3>
+                Accessible Summer in Rotterdam 🍹
+            </h3>
 
-                <h3>
-                    Accessible Summer in Rotterdam 🍹
-                </h3>
+            <dl>
+                <dd>Wanneer</dd>
+                <dt>{{ post.date | date: "%e %B %y" }}</dt>
+                <dd>Waar</dd>
+                <dt>UNITiD, Schiedamsedijk 40a, Rotterdam</dt>
+            </dl>
 
-                <dl>
-                    <dd>Wanneer</dd>
-                    <dt>{{ post.date | date: "%e %B %y" }}</dt>
-                    <dd>Waar</dd>
-                    <dt>UNITiD, Schiedamsedijk 40a, Rotterdam</dt>
-                </dl>
+            <p>
+            	{{ post.excerpt }}
+            </p>
 
-                <p>
-                	{{ post.excerpt }}
-                </p>
+            <span>{{ post.date | date: "%b %y" }}</span>
 
-                <span>{{ post.date | date: "%b %y" }}</span>
-
-            </div>
+        </div>
 
 
-            <button>Meld je aan</button>
+        <button>Meld je aan</button>
 
-            <a href="https://www.meetup.com/Inclusive-Design-Accessibility/events/239750521/">Meer informatie</a>
+        <a href="https://www.meetup.com/Inclusive-Design-Accessibility/events/239750521/">Meer informatie</a>
 
-        </section>
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
+    </section>
+{% endfor %}
 
 </main>
 </body>
