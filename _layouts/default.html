@@ -31,7 +31,6 @@
 
 	{% if blogDate >= today %}
 
-
     <section class="meetup first-up">
         <h2>Eerstvolgende bijeenkomst</h2>
 
@@ -68,6 +67,45 @@
     	{% break %}
     {% endif %}
 
+
+{% endfor %}
+
+{% for post in site.posts %}
+
+	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
+
+	{% if blogDate < today %}
+
+    <section class="meetup">
+        <h2>Vorige bijeenkomst</h2>
+
+        <div>
+
+            <h3>
+                Global Accessibility Awareness Day
+            </h3>
+
+            <h4>Presentaties</h4>
+
+            <ul>
+                <li>Wilco Fiers &mdash; Axe Web Accessibility Testing Tool</li>
+                <li>Elisa Ostet &mdash; Sport en Digitale Toegankelijkheid</li>
+                <li>Jules Ernst &mdash; Digitale Toegankelijkheid in Nederland</li>
+
+            </ul>
+
+            <span>18 mei</span>
+
+        </div>
+
+        <a href="https://www.meetup.com/Inclusive-Design-Accessibility/events/239750369/">Bekijk deze bijeenkomst op Meetup.com</a>
+
+
+    </section>
+	
+	{% break %}
+
+    {% endif %}
 
 {% endfor %}
 
