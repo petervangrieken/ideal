@@ -2,6 +2,7 @@
 layout: meetup
 title: "Accessible Summer in Rotterdam 🍹"
 date: 2017-07-20
+volgende: true
 ---
 
 * Wilco Fiers &mdash; Axe Web Accessibility Testing Tool

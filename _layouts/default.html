@@ -22,10 +22,11 @@
 
 <main id="main" role="main"> 
   
-{% for post in site.posts limit:1%}
+{% for post in site.posts %}
+	{% if post.volgende %}
 
     <section class="meetup first-up">
-        <h2>Volgende bijeenkomst</h2>
+        <h2>Eerstvolgende bijeenkomst</h2>
 
         <div>
 
@@ -54,6 +55,8 @@
         <a href="https://www.meetup.com/Inclusive-Design-Accessibility/events/239750521/">Meer informatie</a>
 
     </section>
+
+    {% endif %}
 
 {% endfor %}
 
