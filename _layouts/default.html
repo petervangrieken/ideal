@@ -22,8 +22,7 @@
 
 <main id="main" role="main"> 
   
-{% for post in site.posts %}
-	{% if forloop.first == true %}
+{% for post in site.posts limit:1%}
 
     <section class="meetup first-up">
         <h2>Volgende bijeenkomst</h2>
@@ -55,9 +54,6 @@
         <a href="https://www.meetup.com/Inclusive-Design-Accessibility/events/239750521/">Meer informatie</a>
 
     </section>
-    {% else %}
-    	{% break %}
-    {% endif %}
 
 {% endfor %}
 
