@@ -21,7 +21,9 @@
 
 
 <main id="main" role="main"> 
-  
+
+{% capture today %}{{'now' | date: '%s' }}{% endcapture %}
+
 {% for post in site.posts %}
 	{% if post.volgende %}
 
@@ -62,25 +64,31 @@
 
 
 
-        <section class="past-meetups">
-            <h2>Eerdere bijeenkomsten</h2>
+    <section class="past-meetups">
+        <h2>Eerdere bijeenkomsten</h2>
 
-            <ol>
-            {% for post in site.posts reversed %}
-
-                <li>
-                    <h3>{{ post.title }}</h3>
-                    <span>{{ post.date | date: "%e %B %y" }}</span>
-                </li>
-
-			{% endfor %}
-
-            </ol>
+        <ol>
 
 
-            <a href="https://www.meetup.com/Inclusive-Design-Accessibility/">Alle bijeenkomsten</a>
+        {% for post in site.posts reversed %}
 
-        </section>
+ 			{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
+
+        	{% if blogDate < today %}
+
+            <li>
+                <h3>{{ post.title }}</h3>
+                <span>{{ post.date | date: "%e %B %y" }}</span>
+            </li>
+
+		{% endfor %}
+
+        </ol>
+
+
+        <a href="https://www.meetup.com/Inclusive-Design-Accessibility/">Alle bijeenkomsten</a>
+
+    </section>
 
 
 
