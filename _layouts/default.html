@@ -82,19 +82,14 @@
         <div>
 
             <h3>
-                Global Accessibility Awareness Day
+                {{ post.title }}
             </h3>
 
             <h4>Presentaties</h4>
 
-            <ul>
-                <li>Wilco Fiers &mdash; Axe Web Accessibility Testing Tool</li>
-                <li>Elisa Ostet &mdash; Sport en Digitale Toegankelijkheid</li>
-                <li>Jules Ernst &mdash; Digitale Toegankelijkheid in Nederland</li>
+            {{ post.excerpt }}
 
-            </ul>
-
-            <span>18 mei</span>
+            <span>{{ post.date | date: "%e %b" }}</span>
 
         </div>
 
