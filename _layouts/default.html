@@ -60,6 +60,30 @@
 
 {% endfor %}
 
+
+
+        <section class="past-meetups">
+            <h2>Eerdere bijeenkomsten</h2>
+
+            <ol>
+            {% for post in site.posts reversed %}
+
+                <li>
+                    <h3>{{ post.title }}</h3>
+                    <span>{{ post.date | date: "%e %B %y" }}</span>
+                </li>
+
+			{% endfor %}
+
+            </ol>
+
+
+            <a href="https://www.meetup.com/Inclusive-Design-Accessibility/">Alle bijeenkomsten</a>
+
+        </section>
+
+
+
 </main>
 </body>
 </html>  
