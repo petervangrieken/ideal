@@ -2,9 +2,8 @@
 layout: meetup
 title: "Accessible Summer in Rotterdam 🍹"
 date: 2017-07-20 19:00
-volgende: true
+meetuplink: https://www.meetup.com/Inclusive-Design-Accessibility/events/239750521/
 ---
 
-* Wilco Fiers &mdash; Axe Web Accessibility Testing Tool
-* Elisa Ostet &mdash; Sport en Digitale Toegankelijkheid
-* Jules Ernst &mdash; Digitale Toegankelijkheid in Nederland
+* Dean Birkett - Usability Testing with AAC users
+* Bob Offereins - Inclusive Lifedesign

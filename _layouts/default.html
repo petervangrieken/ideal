@@ -24,21 +24,13 @@
 
 {% capture today %}{{'now' | date: '%s' }}{% endcapture %}
 
-{{ today }}
-
 {% for post in site.posts reversed %}
 
 	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
-{{ post.title }}
-{{ blogDate }}
-
 
 	{% if blogDate >= today %}
 
-
-	
-	
 
     <section class="meetup first-up">
         <h2>Eerstvolgende bijeenkomst</h2>
@@ -67,9 +59,12 @@
         </div>
 
 
-        <button>Meld je aan</button>
+        <!--button>Meld je aan</button-->
 
-        <a href="https://www.meetup.com/Inclusive-Design-Accessibility/events/239750521/">Meer informatie</a>
+
+        {{% if post.meetuplink != "" }}
+        <a href="{{ post.meetuplink }}">Meer informatie</a>
+        {{% endif %}}
 
     </section>
 
@@ -102,7 +97,9 @@
 
         </div>
 
-        <a href="https://www.meetup.com/Inclusive-Design-Accessibility/events/239750369/">Bekijk deze bijeenkomst op Meetup.com</a>
+        {{% if post.meetuplink != "" }}
+        <a href="{{ post.meetuplink }}">Bekijk deze bijeenkomst op Meetup.com</a>
+        {{% endif %}}
 
 
     </section>
