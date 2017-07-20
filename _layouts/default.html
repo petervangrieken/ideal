@@ -59,7 +59,7 @@
         </div>
 
 
-        <!--button>Meld je aan</button-->
+        <button>Meld je aan</button>
 
 
         {{% if post.meetuplink }}
@@ -168,5 +168,20 @@
 
 
 </main>
+
+<script>
+	var key = 276f324c67213b6b6223586f4d,
+		buttonRSVP = document.querySelector('button'),
+		urlRSVP = "https://api.meetup.com/:urlname/events/237982509/rsvps";
+
+	buttonRSVP.addEventListener('click', function(e) {
+		fetch(urlRSVP).then(function(response) {
+			console.log(response);
+		}
+	});
+
+
+</script>
+
 </body>
 </html>  
