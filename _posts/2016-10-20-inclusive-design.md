@@ -1,7 +1,7 @@
 ---
 layout: meetup
 title: "Inclusive Design"
-date: 2017-10-20
+date: 2016-10-20
 ---
 
 * Peter van Hofweegen & Hans van Dijk - ITvitae
