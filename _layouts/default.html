@@ -23,12 +23,12 @@
 <main id="main" role="main"> 
 
 {% capture today %}{{'now' | date: '%s' }}{% endcapture %}
-
+{{ assign today = today + (22 * 60 * 60) }}
 {{ today }}
 
 {% for post in site.posts reversed %}
 
-	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
+	{% capture blogDate %}{{post.date | date: '%s' }} + 24{% endcapture %}
 
 {{ post.title }}
 {{ blogDate }}
