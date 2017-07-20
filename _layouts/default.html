@@ -46,11 +46,11 @@
                 <dd>Wanneer</dd>
                 <dt>{{ post.date | date: "%e %B %y" }}</dt>
                 <dd>Waar</dd>
-                <dt>UNITiD, Schiedamsedijk 40a, Rotterdam</dt>
+                <dt>{{ post.location}}</dt>
             </dl>
 
             <p>
-            	{{ post.excerpt }}
+            	{{ post.content }}
             </p>
 
             <span>{{ post.date | date: "%e %b" }}</span>
@@ -91,7 +91,7 @@
 
             <h4>Presentaties</h4>
 
-            {{ post.excerpt }}
+            {{ post.content }}
 
             <span>{{ post.date | date: "%e %b" }}</span>
 
