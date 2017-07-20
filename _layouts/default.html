@@ -151,8 +151,6 @@
                 <h3>
                 {{% if post.meetuplink }}
         			<a href="{{ post.meetuplink }}">{{ post.title }}</a>
-        		{{% else %}}
-					{{ post.title }}
         		{{% endif %}}
                 </h3>
                 <span>{{ post.date | date: "%e %B %y" }}</span>

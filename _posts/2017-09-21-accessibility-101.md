@@ -3,6 +3,8 @@ layout: meetup
 title: "Accessibility 101"
 location: "Soda Studio"
 date: 2017-09-21
+location: "Soda Studio, Fred. Roeskestraat 99, Amsterdam"
+meetuplink: "https://www.meetup.com/Inclusive-Design-Accessibility/events/239750489/"
 ---
 
 * Jeroen Hulscher - Iets over toegankelijkheid
