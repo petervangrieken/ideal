@@ -26,10 +26,16 @@
 
 
 {% for post in site.posts reversed %}
+	{{ today }}
 
 	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
-	{% unless blogDate < today %}
+
+
+	{% if blogDate >= today %}
+
+	{{ today }}
+	{{ blogDate }}
 
     <section class="meetup first-up">
         <h2>Eerstvolgende bijeenkomst</h2>
@@ -74,7 +80,7 @@
 
 	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
-	{% unless blogDate > today %}
+	{% if blogDate < today %}
 
     <section class="meetup">
         <h2>Vorige bijeenkomst</h2>
