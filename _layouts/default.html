@@ -48,7 +48,7 @@
 
             <dl>
                 <dd>Wanneer</dd>
-                <dt>{{ post.date | date: "%e %B %y" }}</dt>
+                <dt>{{ post.date | date: "%e %B %Y" }}</dt>
                 <dd>Waar</dd>
                 <dt>{{ post.location}}</dt>
             </dl>
@@ -155,7 +155,7 @@
         			<a href="{{ post.meetuplink }}">{{ post.title }}</a>
         		{{% endif %}}
                 </h3>
-                <span>{{ post.date | date: "%e %B %y" }}</span>
+                <span>{{ post.date | date: "%e %B %Y" }}</span>
             </li>
             {% endif %}
 
@@ -179,7 +179,7 @@
 
             <li>
                 <h3>{{ post.title }}</h3>
-                <span>{{ post.date | date: "%e %B %y" }}</span>
+                <span>{{ post.date | date: "%e %B %Y" }}</span>
             </li>
             {% endif %}
 
