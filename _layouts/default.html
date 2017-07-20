@@ -24,19 +24,21 @@
 
 {% capture today %}{{'now' | date: '%s' }}{% endcapture %}
 
+{{ today }}
 
 {% for post in site.posts reversed %}
 
 	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
 {{ post.title }}
+{{ blogDate }}
 
 
 	{% if blogDate >= today %}
 
 
-	{{ today }}
-	{{ blogDate }}
+	
+	
 
     <section class="meetup first-up">
         <h2>Eerstvolgende bijeenkomst</h2>
