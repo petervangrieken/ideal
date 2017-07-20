@@ -142,19 +142,16 @@
         <h2>We gaan ook nog naar</h2>
 
         <ol>
-
-
         {% for post in site.posts reversed %}
 
  			{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
-        	{% if blogDate >= today %}
-
+        	{% if blogDate > today %}
             <li>
                 <h3>
                 {{% if post.meetuplink }}
         			<a href="{{ post.meetuplink }}">{{ post.title }}</a>
-        		{% else %}
+        		{{% else %}}
 					{{ post.title }}
         		{{% endif %}}
                 </h3>
