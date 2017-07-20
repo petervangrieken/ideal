@@ -148,7 +148,7 @@
 
  			{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
-        	{% if blogDate > today && post.title != firstUp%}
+        	{% if blogDate > today and post.title != firstUp %}
             <li>
                 <h3>
                 {{% if post.meetuplink }}
