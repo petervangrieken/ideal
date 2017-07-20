@@ -26,15 +26,15 @@
 
 
 {% for post in site.posts reversed %}
-	{{ today }}
 
 	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
+{{ post.title }}
 
 
 	{% if blogDate >= today %}
 
-	{{ post.title }}
+
 	{{ today }}
 	{{ blogDate }}
 
