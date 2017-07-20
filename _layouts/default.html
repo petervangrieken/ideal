@@ -33,6 +33,8 @@
 
 	{% if blogDate >= today %}
 
+	{% capture firstUp %}{{ post.title }}{% endcapture %}
+
 
     <section class="meetup first-up">
         <h2>Eerstvolgende bijeenkomst</h2>
@@ -146,7 +148,7 @@
 
  			{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
-        	{% if blogDate > today %}
+        	{% if blogDate > today && post.title != firstUp%}
             <li>
                 <h3>
                 {{% if post.meetuplink }}
