@@ -1,7 +1,7 @@
 ---
 layout: meetup
 title: "Accessible Summer in Rotterdam 🍹"
-date: 2017-07-20
+date: 2017-07-20 19:00
 volgende: true
 ---
 
