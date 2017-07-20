@@ -29,7 +29,7 @@
 
 	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
-	{% if blogDate >= today %}
+	{% unless blogDate < today %}
 
     <section class="meetup first-up">
         <h2>Eerstvolgende bijeenkomst</h2>
@@ -74,7 +74,7 @@
 
 	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
-	{% if blogDate < today %}
+	{% unless blogDate > today %}
 
     <section class="meetup">
         <h2>Vorige bijeenkomst</h2>
