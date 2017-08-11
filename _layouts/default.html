@@ -25,17 +25,10 @@
 <main id="main" role="main"> 
 
 {% capture today %}{{'now' | date: '%s' }}{% endcapture %}
-
 {% for post in site.posts reversed %}
-
 	{% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
-
-
 	{% if blogDate >= today %}
-
 	{% capture firstUp %}{{ post.title }}{% endcapture %}
-
-
     <section class="meetup first-up">
         <h2>Eerstvolgende bijeenkomst</h2>
 
